@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(227, 227, 227, 1);
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+ul,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+h1.title {
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 41px;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 8px;
+}
+
+
+:root {
+    --blue: rgba(101, 63, 255, 1);
+    --blue-1: rgba(45, 0, 229, 1);
+    --blue-2: rgba(21, 0, 106, 1);
+    --width-content: 425px;
+}
+
+
+/* Header starting */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgb(21, 25, 41);
+    min-height: 10vh;
+}
+
+header nav {
+    padding: 35px 60px 0 60px;
+    height: 100%;
+    position: relative;
+}
+
+header nav a.logo {
+    display: flex;
+}
+
+header nav a.logo img {
+    height: 30px;
+}
+
+header nav i.fa-arrow-right-from-bracket {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    padding: 0 8px;
+    cursor: pointer;
+    color: white;
+}
+
+header nav .header-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav .header-box i {
+    display: none;
+}
+
+header .header-mobile {
+    display: none;
+}
+
+
+/* Main starting */
+
+main {
+    width: 100%;
+    padding-top: 10vh;
+}
+
+main .wrap {
+    display: flex;
+}
+
+main .wrap .sidebar {
+    position: fixed;
+    top: 10vh;
+    bottom: 0;
+    background-color: rgb(21, 25, 41);
+    max-width: var(--width-content);
+    width: 100%;
+    padding: 25px 80px 0 60px;
+}
+
+main .wrap .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main .wrap .sidebar ul li a {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    background-color: white;
+    padding: 10px 14px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+}
+
+main .wrap .sidebar ul li a i {
+    font-size: 20px;
+    margin-right: 4px;
+}
+
+main .wrap .sidebar ul li a:hover {
+    background-color: var(--blue);
+}
+
+main .groups-content,
+main .main-content {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - var(--width-content));
+    margin-left: auto;
+    padding: 15px 30px 15px 30px;
+}
+
+main .groups-content ul {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 20px;
+}
+
+main .groups-content ul li {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 13px;
+}
+
+main .groups-content ul li span {
+    display: block;
+    padding: 12px 22px 8px 22px;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 32px;
+    color: rgba(0, 0, 0, 1);
+}
+
+main .groups-content button {
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: white;
+    border: none;
+    background-color: var(--blue-2);
+    padding: 12px 30px;
+    border-radius: 5px;
+}
+
+main .groups-content a.createGroup {
+    background-color: var(--blue-2);
+    display: inline-block;
+    align-self: flex-start;
+    padding: 14px 32px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    line-height: 23px;
+    font-size: 20px;
+}
+
+main .wrap .mentor-content table tr {
+    justify-content: flex-start;
+}
+
+main .wrap form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .wrap form input {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    padding: 12px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid rgba(179, 179, 179, 1);
+}
+
+main .wrap form input::placeholder {
+    color: rgb(134, 130, 130);
+}
+
+main .wrap form button {
+    align-self: flex-start;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: white;
+    border: none;
+    background-color: var(--blue-2);
+    padding: 12px 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+main .wrap .info-content .info-content-card {
+    position: relative;
+    background-color: white;
+    border-radius: 6px;
+    padding: 24px;
+}
+
+main .wrap .info-content .info-content-card button.fa-pen {
+    position: absolute;
+    top: 28px;
+    right: 24px;
+    padding: 0 4px;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(127, 124, 124);
+    background-color: transparent;
+    border: none;
+}
+
+main .wrap .info-content .info-content-card .info-img {
+    height: 240px;
+    display: block;
+    max-width: 100%;
+}
+
+main .wrap .info-content .info-content-card .info-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+main .wrap .info-content .info-content-card p.infoText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(0, 0, 0);
+    margin-top: 16px;
+    text-align: center;
+}
+
+main .wrap .info-content .info-content-card ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+main .wrap .info-content .info-content-card ul li {
+    display: flex;
+    flex-direction: column;
+}
+
+main .wrap .info-content .info-content-card ul li span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 8px;
+}
+
+main .wrap .info-content .info-content-card ul li p {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgb(0, 0, 0);
+}
+
+main .wrap .info-content .info-content-wrap {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+main .wrap .info-content .info-content-wrap .info-content-box {
+    background-color: white;
+    max-width: 220px;
+    width: 100%;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    border-radius: 6px;
+    position: relative;
+}
+
+main .wrap .info-content .info-content-wrap .info-content-box button.fa-pen {
+    position: absolute;
+    top: 30px;
+    right: 16px;
+    padding: 0 4px;
+    font-size: 15px;
+    color: rgb(127, 124, 124);
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+main .wrap .info-content .info-content-wrap .info-content-box strong {
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 26px;
+    color: rgb(0, 0, 0);
+}
+
+main .wrap .info-content .info-content-wrap .info-content-box span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: rgb(0, 0, 0);
+}
+
+.info-modal .modal-dialog {
+    max-width: 800px;
+}
+
+.password-modal .modal-dialog .modal-header h1,
+.info-modal .modal-dialog .modal-header h1 {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: black;
+}
+
+.info-modal .modal-dialog .modal-body .row {
+    row-gap: 20px;
+}
+
+.info-modal .modal-dialog .modal-body .info-gender {
+    display: flex;
+    gap: 24px;
+}
+
+.password-modal .modal-dialog .modal-footer,
+.info-modal .modal-dialog .modal-footer {
+    border: none;
+}
+
+/* 
+    xxl: 1200px - infinite
+    xl: 992px - 1199px
+    lg: 768px - 991px
+    md  - 576px  - 767px
+    sm  - 320px  - 575px
+    xs  - 0px    - 319px
+*/
+
+@media(max-width: 1199px) {
+    :root {
+        --width-content: 325px;
+    }
+
+    header nav {
+        padding: 35px 40px 0 40px;
+    }
+
+    main .wrap .sidebar {
+        padding: 20px 40px 0 40px;
+    }
+
+    main .wrap .info-content .info-content-card .info-img img {
+        object-fit: cover;
+    }
+
+    main .wrap .info-content .info-content-card ul li p {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media(max-width: 991px) {
+    :root {
+        --width-content: 270px;
+    }
+
+    h1.title {
+        font-size: 32px;
+        line-height: 37px;
+    }
+
+    header nav {
+        padding: 30px 35px 0 35px;
+    }
+
+    main .wrap .sidebar {
+        padding: 20px 35px 0 35px;
+    }
+
+    main .wrap .sidebar ul {
+        gap: 8px;
+    }
+
+    main .wrap .sidebar ul li a {
+        font-size: 18px;
+        line-height: 22px;
+        padding: 8px 10px;
+    }
+
+    main .wrap .sidebar ul li a i {
+        font-size: 18px;
+    }
+
+    main .groups-content ul li span {
+        font-size: 23px;
+        line-height: 28px;
+        padding: 10px 18px 8px 18px;
+    }
+
+    main .wrap .info-content .info-content-card .row {
+        row-gap: 30px;
+    }
+
+    main .wrap .info-content .info-content-card ul {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+}
+
+@media(max-width: 767px) {
+    :root {
+        --width-content: 100%;
+    }
+
+    header {
+        position: relative;
+        min-height: unset;
+    }
+
+    header nav {
+        padding: 30px 20px 30px 20px;
+    }
+
+    header nav .header-box i {
+        display: block;
+        font-size: 24px;
+        color: white;
+        padding: 0 6px;
+    }
+
+    header .header-mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        z-index: 9999;
+        max-width: 50%;
+        width: 100%;
+        transition: all .6s ease-in-out;
+        background-color: rgb(21, 25, 41);
+        padding: 22px 0;
+    }
+
+    header .header-mobile.active {
+        transform: translateX(0);
+    }
+
+    header .header-mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header .header-mobile ul li:not(:last-child) {
+        padding-bottom: 6px;
+        border-bottom: 1px solid rgba(227, 227, 227, 1);
+    }
+
+    header .header-mobile ul li a {
+        display: block;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 25px;
+        color: white;
+        padding: 0 20px;
+    }
+
+    header .header-mobile ul li a i {
+        font-size: 20px;
+    }
+
+    header .header-mobile i.fa-close {
+        position: absolute;
+        top: 10px;
+        right: 6px;
+        font-size: 22px;
+        color: white;
+        padding: 0 4px;
+    }
+
+    main {
+        padding-top: 0;
+    }
+
+    main .wrap {
+        flex-direction: column;
+    }
+
+    main .wrap .sidebar {
+        display: none;
+    }
+
+    main .groups-content,
+    main .main-content {
+        padding: 15px 20px 15px 20px;
+        width: 100%;
+    }
+
+    main .groups-content ul li span {
+        font-size: 21px;
+        line-height: 25px;
+    }
+
+    main .wrap form {
+        gap: 10px;
+    }
+
+    main .wrap form input {
+        font-size: 20px;
+        line-height: 22px;
+        padding: 10px 0;
+    }
+}
+
+@media(max-width: 575px) {
+    h1.title {
+        font-size: 28px;
+        line-height: 33px;
+    }
+
+    header nav i.fa-arrow-right-from-bracket {
+        font-size: 18px;
+        right: 4px;
+        top: 10px;
+        padding: 0 4px;
+    }
+
+    header .header-mobile {
+        max-width: 100%;
+    }
+
+    main .groups-content ul li {
+        border-radius: 8px;
+    }
+
+    main .groups-content ul li span {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 10px 16px 10px 16px;
+    }
+
+    main .wrap form button,
+    main .groups-content button {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 10px 24px;
+    }
+
+    main .wrap form input {
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    main .wrap .info-content .info-content-card ul {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    main .wrap .info-content .info-content-wrap {
+        gap: 16px;
+    }
+
+    main .wrap .info-content .info-content-wrap .info-content-box {
+        gap: 14px;
+        padding: 18px 16px;
+    }
+
+    main .wrap .info-content .info-content-wrap .info-content-box button.fa-pen {
+        top: 20px;
+    }
+
+    main .wrap .info-content .info-content-wrap .info-content-box strong {
+        font-size: 21px;
+        line-height: 24px;
+    }
+
+    main .wrap .info-content .info-content-wrap .info-content-box span {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

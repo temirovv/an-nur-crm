@@ -1,22 +1,24 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="../annur-site/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../annur-site/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../annur-site/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="../annur-site/assets/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'annur-site/assets/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'annur-site/assets/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'annur-site/assets/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'annur-site/assets/favicon/site.webmanifest' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/libs/grid.css">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./students.css">
+    <link rel="stylesheet" href="{% static 'mentor/assets/libs/grid.css' %}">
+    <link rel="stylesheet" href="{% static 'mentor/style.css' %}">
+    <link rel="stylesheet" href="{% static 'mentor/style.css' %}">
     <title>AN NUR Mentor</title>
 </head>
 
@@ -30,7 +32,7 @@
                     <div class="header-box">
                         <i class="fa fa-bars"></i>
                         <a href="#!" class="logo">
-                            <img src="../annur-site/assets/images/logo.svg" alt="logo">
+                            <img src="{% static 'annur-site/assets/images/logo.svg' %}" alt="logo">
                         </a>
                     </div>
                 </div>
@@ -130,7 +132,7 @@
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="{% static 'mentor/script.js' %}"></script>
 </body>
 
 </html>

@@ -1,0 +1,1681 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", monospace;
+    background-color: rgb(21, 25, 41);
+}
+
+
+
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.star {
+    transform-style: preserve-3d;
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    color: red;
+}
+
+.star:before {
+    position: absolute;
+    content: '\2726';
+    color: inherit;
+    inset: 0;
+    box-shadow: 0 0 1em .5em #a3c2;
+    filter: drop-shadow(0 0 .5em white);
+    text-shadow: 0 0 .8em #fff5;
+}
+
+button {
+    cursor: pointer;
+}
+
+:root {
+    --blue: rgba(68, 182, 229, 1);
+    --blue-1: rgba(45, 0, 229, 1);
+    --blue-2: rgba(21, 0, 106, 1);
+}
+
+/* Universal styles */
+
+ul,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2.title {
+    font-weight: 800;
+    font-size: 38px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 1);
+}
+
+p.text {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(255, 255, 255, 1);
+}
+
+.bg-animate {
+    position: relative;
+}
+
+.bg-animate::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--blue-2);
+    transition: all .4s ease-in-out;
+}
+
+.bg-animate:hover::after {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    border-radius: 20px;
+}
+
+
+/* Header starting */
+
+header {
+    width: 100%;
+}
+
+header nav {
+    padding-top: 50px;
+}
+
+header nav .header-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav .header-box i {
+    display: none;
+}
+
+header nav ul {
+    gap: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+
+header nav ul li a:hover {
+    color: var(--blue-1);
+}
+
+header nav select {
+    padding: 10px 15px;
+    color: white;
+    font-size: 13.33px;
+    font-weight: 700;
+    line-height: 20px;
+    background-color: var(--blue-1);
+    border-radius: 10px;
+    border: none;
+}
+
+header a.requestLink {
+    padding: 10px 15px;
+    background-color: var(--blue-1);
+    margin-left: 20px;
+    font-size: 13.33px;
+    font-weight: 700;
+    line-height: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+
+header nav .delbut {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer a.logo,
+header nav a.logo {
+    display: inline-flex;
+}
+
+header .header-title {
+    width: 100%;
+    padding-top: 125px;
+}
+
+header .header-title h1 {
+    font-size: 49.75px;
+    font-weight: 800;
+    line-height: 59.7px;
+    color: white;
+}
+
+header .header-title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: white;
+    margin-top: 20px;
+}
+
+header .header-title a {
+    display: inline-block;
+    padding: 20px;
+    border: none;
+    margin-top: 50px;
+    color: white;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-size: 22.22px;
+    font-weight: 700;
+    line-height: 33.33px;
+}
+
+header .header-title a i {
+    font-size: 24px;
+    color: white;
+}
+
+header .header-mobile {
+    display: none;
+}
+
+
+/* Section starting */
+
+section.about {
+    width: 100%;
+    padding-top: 100px;
+}
+
+section.about h3 {
+    color: black;
+}
+
+section.about .about-box {
+    border-radius: 20px;
+    padding: 18px 16px;
+    background-color: white;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+section.about .about-box strong {
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 64px;
+    color: rgba(0, 0, 0, 1);
+    transition: all .3s ease-in-out;
+    z-index: 3;
+}
+
+section.about .about-box p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: black;
+    margin: 0;
+    transition: all .3s ease-in-out;
+    z-index: 3;
+}
+
+section.about .about-box:hover strong,
+section.about .about-box:hover p {
+    color: white;
+}
+
+section.about .row>div:nth-child(2) .about-box::after {
+    background-color: red;
+}
+
+section.about .row>div:nth-child(3) .about-box::after {
+    background-color: darkgreen;
+}
+
+section.about .row>div:nth-child(4) .about-box::after {
+    background-color: purple;
+}
+
+
+section.teachers {
+    width: 100%;
+    padding: 100px 0;
+}
+
+section.teachers .row {
+    row-gap: 20px;
+}
+
+section.teachers .teachers-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.teachers .teachers-card .card-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 6px;
+    border-radius: 16px;
+    transition: all .3 ease-in-out;
+}
+
+section.teachers .teachers-card .card-box:hover {
+    background-color: var(--blue-1);
+}
+
+section.teachers .teachers-card .card-box .img {
+    max-width: 40px;
+    width: 100%;
+    height: 40px;
+}
+
+section.teachers .teachers-card .card-box .content h3 {
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 1);
+}
+
+section.teachers .teachers-card .card-box .content span {
+    width: 800px;
+    font-size: 19px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: white;
+}
+
+section.teachers .img img {
+    width: 100%;
+    border-radius: 36px;
+}
+
+section.teachers .col-4 p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: white;
+    margin-bottom: 44px;
+}
+
+section.teachers .teachers-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+section.teachers .teachers-info .teachers-info-box {
+    border-radius: 20px;
+    padding: 18px 16px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+}
+
+section.teachers .teachers-info .teachers-info-box:nth-child(2)::after {
+    background-color: rgba(230, 1, 5, 1);
+}
+
+section.teachers .teachers-info .teachers-info-box strong {
+    font-weight: 700;
+    font-size: 53px;
+    line-height: 64px;
+    color: rgba(0, 0, 0, 1);
+    margin-bottom: 6px;
+    transition: all .1s ease-in-out;
+    z-index: 3;
+}
+
+section.teachers .teachers-info .teachers-info-box p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 1);
+    margin: 0;
+    transition: all .2s ease-in-out;
+    z-index: 3;
+}
+
+section.teachers .teachers-info .teachers-info-box:hover strong,
+section.teachers .teachers-info .teachers-info-box:hover p {
+    color: white;
+}
+
+
+section.courses {
+    width: 100%;
+    overflow: hidden;
+}
+
+section.courses .row {
+    row-gap: 30px;
+}
+
+section.courses .box {
+    padding: 12px 25px 30px 25px;
+    background-color: rgba(248, 249, 250, 0.1);
+    border-radius: 37px;
+}
+
+section.courses .box .box-top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+section.courses .box .box-top i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    max-width: 60px;
+    width: 100%;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--blue-1);
+}
+
+section.courses .box .box-top h3 {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 45px;
+    margin-left: 16px;
+    color: var(--blue-1);
+}
+
+section.courses .box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+section.courses .box ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+section.courses .box ul li i {
+    font-size: 22px;
+    color: var(--blue-1);
+}
+
+section.courses .box ul li p {
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+section.courses .box a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 500;
+    color: white;
+    padding: 16px 18px;
+    border-radius: 12px;
+    background-color: var(--blue-1);
+}
+
+section.courses .col-4:nth-child(3) .box a,
+section.courses .col-4:nth-child(3) .box .box-top i {
+    background-color: red;
+}
+
+section.courses .col-4:nth-child(3) .box h3,
+section.courses .col-4:nth-child(3) .box ul li i {
+    color: red;
+}
+
+section.courses .col-4:nth-child(4) .box a,
+section.courses .col-4:nth-child(4) .box .box-top i {
+    background-color: darkgreen;
+}
+
+section.courses .col-4:nth-child(4) .box h3,
+section.courses .col-4:nth-child(4) .box ul li i {
+    color: darkgreen;
+}
+
+section.courses .col-4:nth-child(5) .box a,
+section.courses .col-4:nth-child(5) .box .box-top i {
+    background-color: purple;
+}
+
+section.courses .col-4:nth-child(5) .box h3,
+section.courses .col-4:nth-child(5) .box ul li i {
+    color: purple;
+}
+
+section.courses .col-4:nth-child(6) .box a,
+section.courses .col-4:nth-child(6) .box .box-top i {
+    background-color: aqua;
+}
+
+section.courses .col-4:nth-child(6) .box h3,
+section.courses .col-4:nth-child(6) .box ul li i {
+    color: aqua;
+}
+
+section.courses .col-4:nth-child(7) .box a,
+section.courses .col-4:nth-child(7) .box .box-top i {
+    background-color: rgb(245, 95, 31);
+}
+
+section.courses .col-4:nth-child(7) .box h3,
+section.courses .col-4:nth-child(7) .box ul li i {
+    color: rgb(245, 95, 31);
+}
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap");
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:root {
+    --c-blue-900: #081030;
+    --c-blue-800: #111b40;
+    --c-blue-700: #152148;
+    --c-blue-500: #1d7bdb;
+    --c-blue-300: #293359;
+    --c-blue-200: #4e5985;
+    --c-blue-100: #dfe8ff;
+
+    --c-green-400: #4ade80;
+}
+
+/* Some basic CSS overrides */
+body .section-price {
+    line-height: 1.5;
+    min-height: 50vh;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(21, 25, 41);
+    color: var(--c-blue-100);
+    padding: 10vh 12px;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+/* End basic CSS override */
+
+.price-table {
+    background-color: var(--c-blue-700);
+    border-radius: 16px;
+    max-width: 375px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 15px 45px 0 rgba(#000, 0.15);
+    position: relative;
+    background-image: linear-gradient(135deg,
+            rgba(#4ade80, 0.15),
+            rgba(#1d7bdb, 0.1) 20%,
+            var(--c-blue-700) 40%,
+            var(--c-blue-700) 100%);
+
+    &:after {
+        content: "";
+        display: block;
+        top: -3px;
+        left: -3px;
+        bottom: -3px;
+        right: -3px;
+        z-index: -1;
+        position: absolute;
+        border-radius: 16px;
+        background-image: linear-gradient(135deg,
+                var(--c-green-400),
+                var(--c-blue-500) 40%,
+                var(--c-blue-300) 60%,
+                var(--c-blue-700) 100%);
+    }
+
+    .price {
+        font-size: 3rem;
+        line-height: 1;
+        font-weight: 700;
+        display: inline-flex;
+        align-self: center;
+        align-items: center;
+        gap: 4px;
+        position: relative;
+        color: #fff;
+
+        small {
+            font-size: 1.25rem;
+            font-weight: 400;
+            position: absolute;
+            left: -1.5ch;
+        }
+    }
+
+    .title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.25;
+        text-align: center;
+        margin-top: 16px;
+        color: #fff;
+    }
+
+    .description {
+        font-size: 1rem;
+        text-align: center;
+        margin-top: 4px;
+    }
+}
+
+.features {
+    margin-top: 32px;
+    row-gap: 30px;
+}
+
+.feature {
+    position: relative;
+
+    &+& {
+        margin-top: 16px;
+    }
+
+    summary {
+        display: inline-flex;
+        align-items: center;
+        list-style: none;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
+
+    &[open] summary:after {
+        content: "";
+        display: block;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 50;
+    }
+
+    &[open] {
+        div {
+            animation: scale 0.15s ease;
+        }
+    }
+
+    .checkmark {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background-color: var(--c-green-400);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+
+        svg {
+            width: 18px;
+            height: 18px;
+            color: #fff;
+        }
+    }
+
+    .question-icon {
+        display: flex;
+        align-items: center;
+        margin-left: 6px;
+        cursor: pointer;
+    }
+
+    .answer {
+        padding: 12px;
+        background-color: var(--c-blue-800);
+        border-radius: 6px;
+        position: absolute;
+        top: -12px;
+        z-index: 100;
+        transform: translatey(-100%) translatex(-50%);
+        transform-origin: bottom center;
+        width: 80%;
+        left: 50%;
+        border: 1px solid var(--c-blue-300);
+        box-shadow: 0 15px 30px 0 rgba(#000, 0.1);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: translatey(-100%) translatex(-50%) scale(0);
+    }
+
+    100% {
+        transform: translatey(-100%) translatex(-50%) scale(1);
+    }
+}
+
+.price-section {
+    display: flex;
+    gap: 20px;
+}
+
+
+section.students {
+    padding: 100px 20px 0 20px;
+}
+
+section.students .row {
+    margin-bottom: 30px;
+}
+
+section.students .students-box {
+    display: flex;
+    gap: 22px;
+    padding: 24px 32px;
+    border-radius: 14px;
+    background-color: rgba(240, 255, 255, 0.1);
+}
+
+section.students .students-box .students-box-img {
+    display: flex;
+    min-width: 200px;
+    max-height: 280px;
+}
+
+section.students .students-box .students-box-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+
+section.students .students-box-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section.students .students-box-content h3 {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 31px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+section.students .students-box-content p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+section.students .students-box-content .students-box-content-info {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+section.students .students-box-content .students-box-content-info .students-box-content-info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 24px 20px;
+    border-radius: 14px;
+    background-color: rgb(33, 196, 33);
+    max-width: 165px;
+    width: 100%;
+    height: 100%;
+}
+
+section.students .students-box-content .students-box-content-info .students-box-content-info-box strong {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+    color: white;
+}
+
+section.students .students-box-content .students-box-content-info .students-box-content-info-box span {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+section.shop {
+    width: 100%;
+    padding-top: 100px;
+}
+
+section.shop .row {
+    margin-bottom: 30px;
+}
+
+section.shop .box {
+    padding: 16px 20px;
+    background-color: rgba(234, 234, 234, 1);
+    border-radius: 16px;
+}
+
+section.shop .box .box-img {
+    display: inline-flex;
+    max-height: 230px;
+    width: 100%;
+}
+
+section.shop .box h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 26px;
+    color: rgba(0, 0, 0, 1);
+    margin: 16px 0;
+}
+
+section.shop .box ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+section.shop .box ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.shop .box ul li span {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 1);
+}
+
+section.shop .box ul li img {
+    width: 40px;
+    height: 40px;
+}
+
+section.shop .box button {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+    background-color: var(--blue-1);
+    border: none;
+    border-radius: 6px;
+    padding: 10px 30px;
+    display: block;
+    margin: auto;
+}
+
+
+section.we {
+    padding: 100px 20px 0 20px;
+}
+
+section.we .we-card {
+    display: flex;
+    gap: 24px;
+    max-width: 620px;
+}
+
+section.we .we-card .we-card-video {
+    display: inline-flex;
+    min-width: 320px;
+    width: 100%;
+    height: 460px;
+}
+
+section.we .we-card .we-card-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.we .we-card .we-card-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 340px;
+    width: 100%;
+    height: 100%;
+}
+
+section.we .we-card .we-card-images img {
+    width: 100%;
+    height: 220px;
+}
+
+
+section.news {
+    width: 100%;
+    padding-top: 100px;
+}
+
+section.news .row {
+    margin-bottom: 30px;
+}
+
+section.news .box {
+    display: flex;
+    flex-direction: column;
+}
+
+section.news .box .box-img {
+    max-width: 100%;
+    height: auto;
+}
+
+section.news .box img {
+    background-color: white;
+    border-radius: 30px;
+    width: 100%;
+}
+
+section.news .box p {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30.13px;
+    color: white;
+}
+
+
+section.degree {
+    width: 100%;
+    padding: 100px 0;
+}
+
+section.degree .row {
+    row-gap: 35px;
+}
+
+section.degree .box {
+    padding: 60px 32px;
+    background-color: rgba(248, 249, 250, 0.1);
+    border-radius: 30px;
+}
+
+section.degree .box h3 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+section.degree .box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+section.degree .box form input {
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 23px;
+    color: white;
+    border: none;
+    border-bottom: 1.67px solid rgba(179, 179, 179, 1);
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+}
+
+section.degree .box form input::placeholder {
+    color: rgba(195, 195, 195, 1);
+}
+
+section.degree .box form button {
+    background-color: var(--blue-1);
+    border-radius: 6px;
+    border: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    padding: 7px 60px;
+}
+
+section.degree .box p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: rgba(195, 195, 195, 1);
+    margin-top: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+section.faq {
+    padding-bottom: 100px;
+}
+
+section.faq .accordion {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+section.faq .accordion .accordion-item,
+section.faq .accordion .accordion-item button {
+    background-color: rgba(248, 249, 250, 0.1);
+    border: none;
+    box-shadow: unset;
+}
+
+section.faq .accordion .accordion-item button {
+    color: white;
+    padding: 18px 20px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+section.faq .accordion .accordion-item button::after {
+    content: unset;
+}
+
+section.faq .accordion .accordion-item button i {
+    margin-left: auto;
+}
+
+section.faq .accordion .accordion-item .accordion-body {
+    background-color: rgba(248, 249, 250, 0.15);
+    color: rgba(255, 255, 255, .8);
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 22px;
+}
+
+/* Иконка будет смотреть вниз, когда аккордеон закрыт */
+section.faq .accordion .accordion-item button.collapsed i {
+    transform: rotate(0deg);
+    /* Иконка указывает вниз, когда закрыто */
+    transition: transform 0.3s ease;
+}
+
+/* Иконка будет смотреть вверх, когда аккордеон открыт */
+section.faq .accordion .accordion-item button:not(.collapsed) i {
+    transform: rotate(180deg);
+    /* Иконка указывает вверх, когда открыто */
+    transition: transform 0.3s ease;
+}
+
+/* Footer starting */
+
+footer {
+    width: 100%;
+    padding-top: 60px;
+    background-color: rgba(240, 255, 255, 0.1);
+}
+
+footer .footer-top {
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgb(71, 78, 101);
+}
+
+footer .footer-top h3 {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+footer .footer-top ul {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+footer .footer-top ul li a {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .footer-top a.number {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .footer-top ul.networks {
+    flex-direction: unset;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+footer .footer-top ul.networks li a {
+    display: block;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .footer-bottom {
+    padding: 30px 0;
+}
+
+footer .footer-bottom span {
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+/* 
+    xxl: 1200px - infinite
+    xl: 992px - 1199px
+    lg: 768px - 991px
+    md  - 576px  - 767px
+    sm  - 320px  - 575px
+    xs  - 0px    - 319px
+*/
+
+@media(max-width: 1199px) {
+    section.students .students-box {
+        position: relative;
+        padding-bottom: 170px;
+        flex-direction: column;
+    }
+
+    section.students .students-box-content .students-box-content-info {
+        position: absolute;
+        bottom: 24px;
+        left: 32px;
+        right: 32px;
+        margin: 0;
+    }
+
+    section.students .students-box .students-box-img {
+        display: flex;
+        height: 280px;
+        background-image: url("./assets/images/student.jpg");
+    }
+
+    section.students .students-box .students-box-img img {
+        object-fit: contain;
+        backdrop-filter: blur(10px);
+    }
+
+    section.students .students-box-content .students-box-content-info .students-box-content-info-box {
+        max-width: 180px;
+    }
+
+    section.students .students-box-content .students-box-content-info .students-box-content-info-box span {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 991px) {
+    header {
+        position: relative;
+    }
+
+    header nav {
+        padding-top: 30px;
+    }
+
+    header nav .header-box i {
+        display: block;
+        font-size: 24px;
+        color: white;
+        padding: 0 6px;
+    }
+
+    header .header-title h1 {
+        font-size: 43px;
+        line-height: 50px;
+    }
+
+    header .header-title a {
+        padding: 14px 20px;
+        margin-top: 32px;
+    }
+
+    header .header-mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(-100%);
+        z-index: 9999;
+        max-width: 50%;
+        width: 100%;
+        transition: all .6s ease-in-out;
+        background-color: rgb(217, 217, 217);
+        padding: 22px 0;
+    }
+
+    header .header-mobile.active {
+        transform: translateX(0);
+    }
+
+    header .header-mobile ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    header .header-mobile ul li {
+        padding-bottom: 6px;
+        border-bottom: 1px solid black;
+    }
+
+    header .header-mobile ul li a {
+        display: block;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 25px;
+        color: rgba(0, 0, 0, 1);
+        padding: 0 20px;
+    }
+
+    header .header-mobile a.requestLink {
+        align-self: flex-start;
+        margin-top: 12px;
+        padding: 10px 20px;
+    }
+
+    header .header-mobile i {
+        position: absolute;
+        top: 10px;
+        right: 6px;
+        font-size: 22px;
+        color: black;
+        padding: 0 4px;
+    }
+
+    section.about {
+        overflow: hidden;
+    }
+
+    section.about .about-box {
+        gap: 20px;
+    }
+
+    section.about .about-box strong {
+        font-size: 43px;
+        line-height: 46px;
+    }
+
+    section.teachers .teachers-info .teachers-info-box strong {
+        font-size: 44px;
+        line-height: 49px;
+    }
+
+    section.courses .box .box-top h3 {
+        font-size: 27px;
+        line-height: 34px;
+    }
+
+    .price-table {
+        padding: 25px;
+    }
+
+    .price-table .price {
+        font-size: 2rem;
+    }
+
+    .price-table .price .small {
+        font-size: 1rem;
+    }
+
+    .price-table .title {
+        font-size: 1rem;
+    }
+
+
+    .price-table:nth-child(3) {
+        display: none;
+    }
+
+    section.students .students-box {
+        padding: 24px 32px;
+        flex-direction: row;
+    }
+
+    section.students .students-box-content .students-box-content-info {
+        position: unset;
+        margin-top: 20px;
+    }
+
+    section.we .we-card {
+        max-width: 540px;
+    }
+
+    section.we .we-card .we-card-video {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    section.news .box .box-img {
+        display: inline-flex;
+        height: 220px;
+    }
+
+    section.degree .box {
+        padding: 32px;
+    }
+
+    section.degree .box h3 {
+        font-size: 34px;
+        line-height: 39px;
+    }
+
+    footer .footer-top a.number {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    footer .footer-bottom {
+        padding: 22px 0;
+    }
+}
+
+@media(max-width: 767px) {
+    h2.title {
+        font-size: 33px;
+        line-height: 38px;
+    }
+
+    .bg-animate::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    header .header-title h1 {
+        font-size: 38px;
+        line-height: 43px;
+    }
+
+    header .header-title p {
+        margin-top: 14px;
+    }
+
+    header .header-title a {
+        font-size: 20px;
+        margin-top: 26px;
+        font-weight: 600;
+        line-height: 26px;
+    }
+
+    header .header-title a i {
+        font-size: 20px;
+    }
+
+    section.about .row {
+        row-gap: 30px;
+    }
+
+    section.about .about-box {
+        gap: 14px;
+    }
+
+    section.about .about-box strong {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    section.about .about-box p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    section.teachers .col-4 p {
+        margin-bottom: 26px;
+    }
+
+    section.teachers .teachers-info {
+        gap: 20px;
+    }
+
+    section.teachers .teachers-info .teachers-info-box strong {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    section.teachers .teachers-info .teachers-info-box p {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    .price-table {
+        padding: 25px;
+    }
+
+    section.courses .box {
+        padding: 12px 20px 20px 20px;
+    }
+
+    section.courses .box .box-top i {
+        font-size: 21px;
+        max-width: 50px;
+        height: 50px;
+    }
+
+    section.courses .box .box-top h3 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    section.courses .box ul li i {
+        font-size: 20px;
+    }
+
+    section.courses .box ul li p {
+        font-size: 18px;
+    }
+
+    section.courses .box a {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    section.students .students-box {
+        flex-direction: column;
+        padding: 18px 22px;
+    }
+
+    section.students .students-box .students-box-img {
+        height: 240px;
+    }
+
+    section.students .students-box-content .students-box-content-info .students-box-content-info-box {
+        padding: 18px 16px;
+    }
+
+    section.students .students-box-content .students-box-content-info {
+        gap: 16px;
+    }
+
+    section.shop .box h3 {
+        font-size: 21px;
+        line-height: 24px;
+        margin: 12px 0;
+    }
+
+    section.shop .box ul {
+        gap: 4px;
+        margin-bottom: 10px;
+    }
+
+    section.shop .box button {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    section.shop .box ul li span {
+        font-size: 18px;
+    }
+
+    section.we .we-card {
+        max-width: 520px;
+        gap: 20px;
+    }
+
+    section.we .we-card .we-card-video {
+        min-width: 250px;
+        max-width: 250px;
+    }
+
+    section.news .box p {
+        margin-top: 16px;
+    }
+
+    section.degree .box {
+        padding: 22px;
+    }
+
+    section.degree .box h3 {
+        font-size: 26px;
+        line-height: 33px;
+        margin-bottom: 16px;
+    }
+
+    section.faq .accordion .accordion-item button {
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    section.faq .accordion .accordion-item .accordion-body {
+        font-size: 16px;
+    }
+
+    footer .footer-top .row {
+        row-gap: 30px;
+    }
+
+    footer .footer-top h3 {
+        font-size: 22px;
+        line-height: 26px;
+        margin-bottom: 12px;
+    }
+
+    footer .footer-bottom .row {
+        row-gap: 20px;
+    }
+}
+
+@media(max-width: 575px) {
+    h2.title {
+        font-size: 28px;
+        line-height: 34px;
+    }
+
+    header nav a.requestLink {
+        display: none;
+    }
+
+    header .header-title {
+        padding-top: 100px;
+    }
+
+    header .header-title h1 {
+        font-size: 33px;
+        line-height: 38px;
+    }
+
+    header .header-title p {
+        font-size: 16px;
+    }
+
+    header .header-title a {
+        margin-top: 14px;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 12px 20px;
+    }
+
+    header .header-mobile {
+        max-width: 100%;
+    }
+
+    section.about .about-box {
+        gap: 6px;
+    }
+
+    section.about .about-box strong {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    section.about .about-box p {
+        font-size: 16px;
+    }
+
+    section.teachers .teachers-card {
+        align-items: center;
+    }
+
+    section.teachers .teachers-info {
+        gap: 14px;
+    }
+
+    section.teachers .teachers-info .teachers-info-box strong {
+        font-size: 30px;
+        line-height: 36px;
+    }
+
+    section.teachers .teachers-info .teachers-info-box p,
+    section.shop .box ul li span,
+    section.courses .box ul li p,
+    section.degree .box form input,
+    section.faq .accordion .accordion-item button,
+    section.shop .box button,
+    section.courses .box a,
+    footer .footer-top a.number,
+    section.students .students-box-content p,
+    footer .footer-top ul li a,
+    footer .footer-bottom span {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    section.courses .box a {
+        padding: 12px 16px;
+    }
+
+    section.students .students-box-content h3 {
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    section.shop .box ul li img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .price-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.we {
+        display: none;
+    }
+
+    section.news .box .box-img {
+        height: 200px;
+    }
+
+    section.news .box p {
+        line-height: 24px;
+    }
+
+    section.degree .box {
+        padding: 16px;
+    }
+
+    section.degree .box h3 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    section.degree .box form {
+        gap: 28px;
+    }
+
+    section.faq .accordion .accordion-item button {
+        padding: 14px 18px;
+    }
+
+    section.faq .accordion .accordion-item .accordion-body {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    footer {
+        padding-top: 40px;
+    }
+
+    footer .footer-top h3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    footer .footer-top ul {
+        gap: 8px;
+    }
+
+    footer .footer-top ul.networks {
+        justify-content: center;
+    }
+}

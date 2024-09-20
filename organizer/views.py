@@ -18,7 +18,7 @@ def reyting(request):
 
 
 def student(request):
-    return render(request, 'admin/student.html', {})
+    return render(request, 'admin/students.html', {})
 
 
 def user(request):

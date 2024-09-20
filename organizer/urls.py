@@ -5,6 +5,8 @@ from .views import (
     info, user
 )
 
+app_name = "admin"
+
 urlpatterns = [
     path("index/", index, name="index"),
     path("reyting/", reyting, name="reyting"),

@@ -1,31 +1,31 @@
 from django.shortcuts import render
-
+from .models import Group
  
 def index(request):
     return render(request, 'admin/index.html', {})
 
 
 def mentor(request):
-    return render(request, 'admin/mentor.html', {})
+    return render(request, 'organizer/mentor.html', {})
 
 
 def info(request):
-    return render(request, 'admin/info.html', {})
+    return render(request, 'organizer/info.html', {})
 
 
 def reyting(request):
-    return render(request, 'admin/reyting.html', {})
+    return render(request, 'organizer/reyting.html', {})
 
 
 def student(request):
-    return render(request, 'admin/students.html', {})
+    return render(request, 'organizer/students.html', {})
 
 
 def user(request):
-    return render(request, 'admin/user.html', {})
+    return render(request, 'organizer/user.html', {})
 
 def grade(request):
-    return render(request, 'admin/grade/grade.html', {})
+    return render(request, 'adorganizermin/grade/grade.html', {})
 
 
 

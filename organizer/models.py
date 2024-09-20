@@ -10,7 +10,7 @@ class Group(BaseModel):
         ('graphic_design', 'Graphic Design'),
     ]
     name = models.CharField(max_length=100)  
-    models.CharField(max_length=15, choices=GROUP_AREA_CHOICES)
+    type = models.CharField(max_length=15, choices=GROUP_AREA_CHOICES)
 
     def __str__(self):
         return self.name

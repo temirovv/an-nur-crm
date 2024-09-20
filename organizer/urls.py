@@ -2,10 +2,11 @@ from django.urls import path
 from .views import (
     index, reyting,
     mentor, student,
-    info, user
+    info, user, grade,
+    request, annu_index
 )
 
-app_name = "admin"
+app_name = "organizer"
 
 urlpatterns = [
     path("index/", index, name="index"),
@@ -14,4 +15,8 @@ urlpatterns = [
     path("student/", student, name="student"),
     path("info/", info, name="info"),
     path("user/", user, name="user"),
+    path("grade/", grade, name="grade"),
+
+    path("request/", request, name="request"),
+    path("", annu_index, name="annu_index"),
 ]

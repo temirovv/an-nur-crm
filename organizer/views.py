@@ -23,3 +23,15 @@ def student(request):
 
 def user(request):
     return render(request, 'admin/user.html', {})
+
+def grade(request):
+    return render(request, 'admin/grade/grade.html', {})
+
+
+
+def annu_index(request):
+    return render(request, 'annur-site/index.html', {})
+
+
+def request(request):
+    return render(request, 'annur-site/request.html', {})

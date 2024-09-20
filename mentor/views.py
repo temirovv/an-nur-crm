@@ -13,7 +13,7 @@ def info(request):
     return render(request, 'mentor/info.html', {})
 
 
-def reyting(request):
+def reyting(request):  # noqa
     return render(request, 'mentor/reyting.html', {})
 
 

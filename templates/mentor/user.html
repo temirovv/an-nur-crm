@@ -37,25 +37,25 @@
                     </div>
                 </div>
             </div>
-            <a href="../annur-site/index.html"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <a href="{% url 'mentor:index' %}"> <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
         </nav>
 
         <div class="header-mobile">
             <ul>
                 <li>
-                    <a href="./index.html"><i class="fa-solid fa-users-line"></i> Groups</a>
+                    <a href="{% url 'mentor:group' %}"><i class="fa-solid fa-users-line"></i> Groups</a>
                 </li>
                 <li>
-                    <a href="./student.html"><i class="fa-solid fa-graduation-cap"></i> Student</a>
+                    <a href="{% url 'mentor:student' %}"><i class="fa-solid fa-graduation-cap"></i> Student</a>
                 </li>
                 <li>
-                    <a href="./reyting.html"><i class="fa-solid fa-chart-simple"></i> Reyting</a>
+                    <a href="{% url 'mentor:reyting' %}"><i class="fa-solid fa-chart-simple"></i> Reyting</a>
                 </li>
                 <li>
-                    <a href="./user.html"><i class="fa-solid fa-user-plus"></i> New users</a>
+                    <a href="{% url 'mentor:user' %}"><i class="fa-solid fa-user-plus"></i> New users</a>
                 </li>
                 <li>
-                    <a href="./info.html"><i class="fa-solid fa-gear"></i> Info</a>
+                    <a href="{% url 'mentor:info' %}"><i class="fa-solid fa-gear"></i> Info</a>
                 </li>
             </ul>
             <i class="fa fa-close"></i>
@@ -68,19 +68,19 @@
             <div class="sidebar">
                 <ul>
                     <li>
-                        <a href="./index.html"><i class="fa-solid fa-users-line"></i> Groups</a>
+                        <a href="{% url 'mentor:group' %}"><i class="fa-solid fa-users-line"></i> Groups</a>
                     </li>
                     <li>
-                        <a href="./student.html"><i class="fa-solid fa-graduation-cap"></i> Student</a>
+                        <a href="{% url 'mentor:student' %}"><i class="fa-solid fa-graduation-cap"></i> Student</a>
                     </li>
                     <li>
-                        <a href="./reyting.html"><i class="fa-solid fa-chart-simple"></i> Reyting</a>
+                        <a href="{% url 'mentor:reyting' %}"><i class="fa-solid fa-chart-simple"></i> Reyting</a>
                     </li>
                     <li>
-                        <a href="./user.html"><i class="fa-solid fa-user-plus"></i> New users</a>
+                        <a href="{% url 'mentor:user' %}"><i class="fa-solid fa-user-plus"></i> New users</a>
                     </li>
                     <li>
-                        <a href="./info.html"><i class="fa-solid fa-gear"></i> Info</a>
+                        <a href="{% url 'mentor:info' %}"><i class="fa-solid fa-gear"></i> Info</a>
                     </li>
                 </ul>
             </div>

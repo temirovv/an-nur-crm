@@ -5,6 +5,8 @@ from .views import (
     info, user
 )
 
+app_name = 'mentor'
+
 urlpatterns = [
     path("index/", index, name="index"),
     path("reyting/", reyting, name="reyting"),
